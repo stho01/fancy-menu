@@ -1,0 +1,55 @@
+$fancymenu-height: 2.5em;
+
+.fancymenu {
+  width: 100%;
+  position: relative;
+  height: $fancymenu-height;
+  background: #222;
+}
+
+.fancymenu__navigation {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: inherit;
+
+  > div {
+    height: inherit;
+    display: table-cell;
+    text-align: center;
+    color: white;
+    vertical-align: middle;
+    text-decoration: none;
+    position: relative;
+  }
+
+  a {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+    text-decoration: none;
+
+    span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+  }
+}
+
+.fancymenu__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #222222;
+  //transition: width 300ms;
+}
+
+.fancymenu__overlay--left  { left:  0; }
+.fancymenu__overlay--right { right: 0; }

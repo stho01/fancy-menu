@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div class="fancymenu">
+        <nav class="fancymenu__navigation">
+            <div class="red">
+                <a href="#" ><span>A</span></a>
+            </div>
+            <div class="yellow" data-js-hook="fancymenu:active">
+                <a href="#" ><span>B</span></a>
+            </div>
+            <div class="purple">
+                <a href="#"><span>C</span></a>
+            </div>
+            <div class="green">
+                <a href="#"><span>D</span></a>
+            </div>
+            <div class="torques">
+                <a href="#"><span>E</span></a>
+            </div>
+        </nav>
+        <div class="fancymenu__overlay fancymenu__overlay--left" data-js-hook="fancymenu:overlayleft"></div>
+        <div class="fancymenu__overlay fancymenu__overlay--right" data-js-hook="fancymenu:overlayright"></div>
+    </div>
+
+</div>
+
+<script src="main.js"></script>
+<script>
+    var fancymenu = new Zed.Fancymenu(document.querySelector(".fancymenu"));
+    fancymenu.init();
+</script>
+
+</body>
+</html>
